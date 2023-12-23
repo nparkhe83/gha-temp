@@ -1,0 +1,13 @@
+name: Testing Github Actions
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - run: echo "Checked out repository"
