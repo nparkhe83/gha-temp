@@ -1,0 +1,12 @@
+name: Test of Github Actions from non-default branch with only workflow_dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-workflow-dispatch-branchA:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - run: echo "Run from branchA workflow_dispatch trigger"

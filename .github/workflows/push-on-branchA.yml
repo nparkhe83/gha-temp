@@ -1,0 +1,13 @@
+name: Testing Github Actions workflow from branchA
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build-from-branchA:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - run: echo "Runs github action from branchA"
