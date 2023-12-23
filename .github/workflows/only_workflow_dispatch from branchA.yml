@@ -2,6 +2,7 @@ name: Test of Github Actions from non-default branch with only workflow_dispatch
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   build-workflow-dispatch-branchA:
