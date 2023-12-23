@@ -1,0 +1,12 @@
+name: Confirming Test of Github Actions with only workflow_dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-workflow-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - run: echo "Confirms that there is no run when only workflow_dispatch is set."
